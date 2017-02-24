@@ -37,8 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'users',
     'demo_test',
+    'business_site',
 )
 # AUTH_USER_MODEL = 'users.User'
 
@@ -77,20 +77,20 @@ WSGI_APPLICATION = 'web_demo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', #数据库引擎
         'NAME': 'busi',                       #数据库名
         'USER': 'root',                       #用户名
         'PASSWORD': 'password',                   #密码
-        'HOST': '172.17.34.127',                           #数据库主机，默认为localhost
+        'HOST': '',                           #数据库主机，默认为localhost 172.17.34.127
         'PORT': '',                           #数据库端口，MySQL默认为3306
         'OPTIONS': {
             'autocommit': True,
         },
     }
 }
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
