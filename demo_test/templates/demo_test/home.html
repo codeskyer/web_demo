@@ -1,0 +1,29 @@
+{% extends 'demo_test/base_site.html' %}
+{% block content %}
+    <ul>
+    {% for i in string %}
+        <li>{{ i }}{% if not forloop.last %},{% endif %}</li>
+        {% if i == 5 %}
+            等于5就输出
+        {% endif %}
+    {% endfor %}
+    </ul>
+    <a href="{% url 'add2' 4 5 %}">计算4+5</a>
+    {% url 'add2' 4 5 %}
+    用户名:{{ request.user }}
+    url:{{ request.path }}
+    参数:{{ request.GET.urlencode }}
+    <a href="{{ request.path }}?{{ request.GET.urlencode }}">网址加参数</a>
+    <form method="post">
+        {{ string }}
+        {% csrf_token %}
+        <input type="submit" value="计算">
+    </form>
+
+    <form action="/add3/" method="GET">
+        a:<input type="text" name="a"><br>
+        b:<input type="text" name="b"><br>
+        {% csrf_token %}
+        <input type="submit" value="提交">
+    </form>
+{% endblock %}

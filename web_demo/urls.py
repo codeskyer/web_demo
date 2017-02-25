@@ -16,9 +16,10 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from demo_test import views as demo_views
 urlpatterns = [
-    url(r'^index/',demo_views.test_index,name='home'),
+    url(r'^index/',demo_views.test_index),
     url(r'^add/(\d+)/(\d+)/$',demo_views.old_add_redirect),
     url(r'^new_add/(\d+)/(\d+)/$',demo_views.add,name='add2'),
+    url(r'^add3/$',demo_views.add3,name='add3'),
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^accounts/', include('users.urls')),
 ]
