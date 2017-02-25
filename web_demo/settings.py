@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'busi',                       #数据库名
         'USER': 'root',                       #用户名
         'PASSWORD': 'password',                   #密码
-        'HOST': '172.17.34.127',                           #数据库主机，默认为localhost 172.17.34.127
+        'HOST': '',                           #数据库主机，默认为localhost 172.17.34.127
         'PORT': '',                           #数据库端口，MySQL默认为3306
         'OPTIONS': {
             'autocommit': True,
