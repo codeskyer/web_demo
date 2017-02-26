@@ -15,15 +15,15 @@
     参数:{{ request.GET.urlencode }}
     <a href="{{ request.path }}?{{ request.GET.urlencode }}">网址加参数</a>
     <form method="post">
-        {{ string }}
+        {{ string.as_p }}
         {% csrf_token %}
         <input type="submit" value="计算">
     </form>
 
-    <form action="/add3/" method="GET">
+    <form action="/add3/" method="POST" >
+        {% csrf_token %}
         a:<input type="text" name="a"><br>
         b:<input type="text" name="b"><br>
-        {% csrf_token %}
         <input type="submit" value="提交">
     </form>
 {% endblock %}

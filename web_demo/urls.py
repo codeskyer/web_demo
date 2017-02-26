@@ -20,6 +20,8 @@ urlpatterns = [
     url(r'^add/(\d+)/(\d+)/$',demo_views.old_add_redirect),
     url(r'^new_add/(\d+)/(\d+)/$',demo_views.add,name='add2'),
     url(r'^add3/$',demo_views.add3,name='add3'),
+    url(r'^regiter/$',demo_views.regiter,name='regiter'),
+    url(r'^login/$',demo_views.login,name='login'),
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^accounts/', include('users.urls')),
 ]

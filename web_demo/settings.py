@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'demo_test',
     'business_site',
 )
-# AUTH_USER_MODEL = 'users.User'
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -91,6 +91,17 @@ DATABASES = {
         },
     }
 }
+# ##缓存配置，使用文件系统来做缓存
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+#         'LOCATION': '/var/tmp/django_cache', #路径
+#         'TIMEOUT': 600,
+#         'OPTIONS': {
+#             'MAX_ENTRIES': 1000
+#         }
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
