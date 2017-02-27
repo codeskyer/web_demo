@@ -15,6 +15,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from demo_test import views as demo_views
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     url(r'^index/',demo_views.test_index),
     url(r'^add/(\d+)/(\d+)/$',demo_views.old_add_redirect),
@@ -24,4 +27,4 @@ urlpatterns = [
     url(r'^login/$',demo_views.login,name='login'),
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^accounts/', include('users.urls')),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
