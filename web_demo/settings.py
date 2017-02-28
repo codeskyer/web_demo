@@ -128,6 +128,5 @@ STATIC_URL = '/static/'
 
 #上传文件设置
 MEDIA_ROOT = os.path.join(BASE_DIR, 'business_site/media/')
-
 MEDIA_URL =  '/media/'
 
