@@ -15,7 +15,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'j4^0nhh*_0!1)-0h)iu+93ajfdazj0ep@)-!dho@air8zr!rj6'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -40,7 +38,6 @@ INSTALLED_APPS = (
     'demo_test',
     'business_site',
 )
-
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -73,7 +70,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'web_demo.wsgi.application'
 
-
 # AUTH_USER_MODEL = 'business_site.User'
 
 # Database
@@ -82,12 +78,12 @@ WSGI_APPLICATION = 'web_demo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', #数据库引擎
-        'NAME': 'busi',                       #数据库名
-        'USER': 'root',                       #用户名
-        'PASSWORD': 'root',                   #密码
-        'HOST': '172.17.34.115',                           #数据库主机，默认为localhost 172.17.34.115
-        'PORT': '3306',                           #数据库端口，MySQL默认为3306
+        'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
+        'NAME': 'busi',  # 数据库名
+        'USER': 'root',  # 用户名
+        'PASSWORD': 'root',  # 密码
+        'HOST': '172.17.34.115',  # 数据库主机，默认为localhost 172.17.34.115
+        'PORT': '3306',  # 数据库端口，MySQL默认为3306
         'OPTIONS': {
             'autocommit': True,
         },
@@ -120,15 +116,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-
-#上传文件设置
+# 上传文件设置
 MEDIA_ROOT = os.path.join(BASE_DIR, 'business_site/media/')
-MEDIA_URL =  '/media/'
-
+MEDIA_URL = '/media/'
