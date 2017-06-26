@@ -26,6 +26,11 @@
         b:<input type="text" name="b"><br>
         <input type="submit" value="提交">
     </form>
-
+    <form action={% url "user_form" %} method="POST" name="user_form">
+    {% csrf_token %}
+    用户名:<input type="text" name="name" placeholder="your name" pattern="\w{1,}" maxlength="20" required autofocus>
+    <br>密码:<input type="password" name="pwd" placeholder="your password" pattern="\w{6,}" maxlength="20" required>
+    <br><input type="submit" value="提交" formtarget="_blank">
+    </form>
 
 {% endblock %}

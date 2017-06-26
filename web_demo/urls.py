@@ -19,12 +19,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^index/',demo_views.test_index),
+    url(r'^$',demo_views.test_index),
     url(r'^add/(\d+)/(\d+)/$',demo_views.old_add_redirect),
     url(r'^new_add/(\d+)/(\d+)/$',demo_views.add,name='add2'),
     url(r'^add3/$',demo_views.add3,name='add3'),
     url(r'^regiter/$',demo_views.regiter,name='regiter'),
     url(r'^login/$',demo_views.login,name='login'),
+    url(r'^user/$',demo_views.User3,name='user_form'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/data', demo_views.data,name='locator_data'),
     # url(r'^admin/', include(admin.site.urls)),
