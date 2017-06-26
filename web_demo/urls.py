@@ -26,5 +26,8 @@ urlpatterns = [
     url(r'^regiter/$',demo_views.regiter,name='regiter'),
     url(r'^login/$',demo_views.login,name='login'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/data', demo_views.data,name='locator_data'),
+    # url(r'^admin/', include(admin.site.urls)),
+    # url(r'^$', include(admin.site.urls)),
     # url(r'^accounts/', include('users.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

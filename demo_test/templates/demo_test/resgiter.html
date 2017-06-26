@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
+<script type="text/javascript">
+    function malice()
+    {
+        document.getElementById("formone").submit();
+        alert('提交成功!')
+    }
+</script>
 </head>
 <body>
-<form  method="POST" enctype="multipart/form-data">
+<form  id="formone" method="POST" enctype="multipart/form-data">
     {{ form.as_p }}
     {% csrf_token %}
-    <input type="submit" value="注册">
+    <input type="button" onclick="malice()" value="注册">
 </form>
 </form>
 </body>

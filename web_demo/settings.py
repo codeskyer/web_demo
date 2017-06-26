@@ -85,9 +85,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', #数据库引擎
         'NAME': 'busi',                       #数据库名
         'USER': 'root',                       #用户名
-        'PASSWORD': 'password',                   #密码
-        'HOST': '',                           #数据库主机，默认为localhost 172.17.34.127
-        'PORT': '',                           #数据库端口，MySQL默认为3306
+        'PASSWORD': 'root',                   #密码
+        'HOST': '172.17.34.115',                           #数据库主机，默认为localhost 172.17.34.115
+        'PORT': '3306',                           #数据库端口，MySQL默认为3306
         'OPTIONS': {
             'autocommit': True,
         },
@@ -125,6 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 #上传文件设置
 MEDIA_ROOT = os.path.join(BASE_DIR, 'business_site/media/')

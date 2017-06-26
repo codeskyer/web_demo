@@ -1,6 +1,6 @@
 {% extends 'demo_test/base_site.html' %}
 {% block content %}
-    <form action="/login/" method="POST" enctype="multipart/form-data" id="login-form">
+    <form action="/login/" method="GET" enctype="multipart/form-data" id="login-form">
         {{ form.as_p }}
         {% csrf_token %}
         <input type="submit" value="登陆">
